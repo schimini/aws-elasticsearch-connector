@@ -5,7 +5,7 @@ import * as http from 'http'
 
 
 
-export default (awsConfig: AWS.Config): (new () => Connection) => {
+export default (awsConfig: AWS.Config): typeof Connection => {
   class AmazonConnection extends Connection {
     buildRequestObject(params: any) {
       const req = super.buildRequestObject(params) as http.ClientRequestArgs & {service: string, body: string}

@@ -17,7 +17,7 @@ function awaitAwsCredentials(awsConfig: AWS.Config) {
   });
 }
 
-export default (awsConfig: AWS.Config): (new (opts: TransportOptions) => Transport) => {
+export default (awsConfig: AWS.Config): typeof Transport => {
   class AmazonTransport extends Transport {
     request(params: TransportRequestParams, options?: TransportRequestOptions): Promise<ApiResponse>;
     request(params: TransportRequestParams, options?: TransportRequestOptions, callback?: (err: ApiError, result: ApiResponse) => void): TransportRequestCallback;
