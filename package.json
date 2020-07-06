@@ -32,7 +32,7 @@
     "changelog": "github_changelog_generator -u compwright -p aws-elasticsearch-connector && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
     "lint": "standard src/*.js tests/*.js --fix",
     "build": "tsc",
-    "install": "npm run build",
+    "prepare": "npm run build",
     "pretest": "npm run lint",
     "test": "AWS_PROFILE=null nyc --all mocha tests/Amazon*.test.js",
     "test:integration": "mocha tests/integration.test.js"
