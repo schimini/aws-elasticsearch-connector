@@ -6,7 +6,7 @@ import {
   ApiError,
   ApiResponse,
   TransportRequestCallback,
-  TransportOptions,
+  TransportOptions, TransportRequestPromise
 } from "@elastic/elasticsearch/lib/Transport";
 
 function awaitAwsCredentials(awsConfig: AWS.Config) {
@@ -19,7 +19,7 @@ function awaitAwsCredentials(awsConfig: AWS.Config) {
 
 export default (awsConfig: AWS.Config): typeof Transport => {
   class AmazonTransport extends Transport {
-    request(params: TransportRequestParams, options?: TransportRequestOptions): Promise<ApiResponse>;
+    request(params: TransportRequestParams, options?: TransportRequestOptions): TransportRequestPromise<ApiResponse>;
     request(params: TransportRequestParams, options?: TransportRequestOptions, callback?: (err: ApiError, result: ApiResponse) => void): TransportRequestCallback;
     request(
       params: TransportRequestParams = { method: undefined, path: undefined },
