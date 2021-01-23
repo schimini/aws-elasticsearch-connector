@@ -1,8 +1,8 @@
 {
   "name": "aws-elasticsearch-connector",
-  "version": "9.0.0",
+  "version": "9.0.3",
   "description": "A tiny Amazon Signature Version 4 connection class for @elastic/elasticsearch, for compatibility with AWS Elasticsearch and IAM authentication.",
-  "repository": "https://github.com/compwright/aws-elasticsearch-connector",
+  "repository": "https://github.com/schimini/aws-elasticsearch-connector",
   "bugs": "https://github.com/compwright/aws-elasticsearch-connector/issues",
   "keywords": [
     "elasticsearch",
@@ -54,21 +54,21 @@
     ]
   },
   "dependencies": {
-    "aws4": "^1.10.0"
+    "aws4": "^1.11.0"
   },
   "peerDependencies": {
-    "@elastic/elasticsearch": ">=7.8.0",
-    "aws-sdk": "^2.709.0"
+    "@elastic/elasticsearch": ">=6",
+    "aws-sdk": "^2.793.0"
   },
   "devDependencies": {
-    "@elastic/elasticsearch": "^7.8.0",
     "@types/aws4": "^1.5.1",
     "@types/node": "^14.0.14",
-    "aws-sdk": "^2.710.0",
+    "@elastic/elasticsearch": "^7.10.0",
+    "aws-sdk": "^2.831.0",
     "minimist": "^1.2.5",
-    "mocha": "^8.0.1",
+    "mocha": "^8.2.1",
     "nyc": "^15.1.0",
-    "standard": "^14.3.4",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.6",
+    "standard": "*"
   }
 }
